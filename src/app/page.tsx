@@ -161,32 +161,34 @@ export default function Home() {
       </section>
 
       {/* Voice Services Comparison Table */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Voice Service Platform Comparison</h2>
-        <p className="text-lg text-gray-600 mb-8 text-center">
-          Compare voice calling platforms - perfect for switching from Google Workspace Voice or finding alternatives to traditional phone services.
-        </p>
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Voice Service Platform Comparison</h2>
+          <p className="text-lg text-gray-600 mb-8 text-center">
+            Compare voice calling platforms - perfect for switching from Google Workspace Voice or finding alternatives to traditional phone services.
+          </p>
+        </div>
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden mx-4 sm:mx-6 lg:mx-8">
+          <div className="overflow-x-auto pr-10">
+            <table className="w-full min-w-max">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
+                  <th className="px-3 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider w-32">
                     Voice Platform
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
+                  <th className="px-3 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider w-40">
                     Custom Numbers
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
+                  <th className="px-3 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider w-44">
                     Call Quality & eSIM
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
+                  <th className="px-3 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
                     Pricing & Plans
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
+                  <th className="px-3 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
                     Pros & Cons
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider">
+                  <th className="px-3 py-4 text-left text-sm font-medium text-gray-900 uppercase tracking-wider pr-10">
                     Business Features
                   </th>
                 </tr>
@@ -194,81 +196,84 @@ export default function Home() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {voiceServicePlatforms.map((platform, index) => (
                   <tr key={platform.name} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-3 py-4 w-32">
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900">{platform.name}</h3>
+                        <h3 className="text-base font-semibold text-gray-900 break-words leading-tight">{platform.name}</h3>
                         <a 
                           href={platform.website} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 text-sm"
+                          className="text-blue-600 hover:text-blue-800 text-xs break-words"
                         >
                           Visit Website
                         </a>
                       </div>
                     </td>
                     
-                    <td className="px-6 py-4">
-                      <div className="space-y-2">
+                    <td className="px-3 py-4 w-40">
+                      <div className="space-y-1">
                         <div className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${
                           platform.customNumber.available 
                             ? 'bg-green-100 text-green-800' 
                             : 'bg-red-100 text-red-800'
                         }`}>
-                          {platform.customNumber.available ? 'Available' : 'Not Available'}
+                          {platform.customNumber.available ? 'Available' : 'No'}
                         </div>
-                        <p className="text-sm text-gray-600">{platform.customNumber.details}</p>
+                        <p className="text-xs text-gray-600 leading-tight break-words">{platform.customNumber.details}</p>
                         {platform.customNumber.cost && (
-                          <p className="text-sm font-medium text-gray-900">Cost: {platform.customNumber.cost}</p>
+                          <p className="text-xs font-medium text-gray-900 break-words">{platform.customNumber.cost}</p>
                         )}
                       </div>
                     </td>
                     
-                    <td className="px-6 py-4">
-                      <div className="space-y-2">
-                        <div className="text-sm font-medium text-gray-900">
-                          Call Quality: {platform.callQuality}
+                    <td className="px-3 py-4 w-44">
+                      <div className="space-y-1">
+                        <div className="text-xs font-medium text-gray-900 break-words">
+                          {platform.callQuality}
                         </div>
                         <div className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${
                           platform.esimSupport.available 
                             ? 'bg-green-100 text-green-800' 
                             : 'bg-red-100 text-red-800'
                         }`}>
-                          eSIM: {platform.esimSupport.available ? 'Supported' : 'Not Supported'}
+                          eSIM: {platform.esimSupport.available ? 'Yes' : 'No'}
                         </div>
-                        <p className="text-sm text-gray-600">{platform.esimSupport.details}</p>
+                        <p className="text-xs text-gray-600 leading-tight break-words">{platform.esimSupport.details}</p>
                       </div>
                     </td>
                     
-                    <td className="px-6 py-4">
-                      <div className="space-y-3">
+                    <td className="px-3 py-4">
+                      <div className="space-y-2">
                         {platform.pricing.freeTier && (
                           <div className="inline-flex px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
-                            Free Tier Available
+                            Free Tier
                           </div>
                         )}
                         {platform.pricing.plans.map((plan, planIndex) => (
-                          <div key={planIndex} className="border rounded-lg p-3 bg-gray-50">
-                            <div className="flex justify-between items-start mb-2">
-                              <h4 className="font-semibold text-gray-900">{plan.name}</h4>
-                              <span className="font-bold text-gray-900">{plan.price}</span>
+                          <div key={planIndex} className="border rounded-lg p-2 bg-gray-50">
+                            <div className="flex justify-between items-start mb-1">
+                              <h4 className="font-semibold text-gray-900 text-sm break-words">{plan.name}</h4>
+                              <span className="font-bold text-gray-900 text-sm break-words">{plan.price}</span>
                             </div>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {plan.features.map((feature, featureIndex) => (
+                            <ul className="text-xs text-gray-600 space-y-1">
+                              {plan.features.slice(0, 3).map((feature, featureIndex) => (
                                 <li key={featureIndex} className="flex items-start">
-                                  <span className="text-green-500 mr-2">•</span>
-                                  {feature}
+                                  <span className="text-green-500 mr-1 flex-shrink-0">•</span>
+                                  <span className="break-words">{feature}</span>
                                 </li>
                               ))}
+                              {plan.features.length > 3 && (
+                                <li className="text-gray-400 text-xs">+{plan.features.length - 3} more</li>
+                              )}
                             </ul>
                           </div>
                         ))}
                         {platform.pricing.additionalCosts && (
-                          <div className="text-sm text-red-600">
+                          <div className="text-xs text-red-600">
                             <strong>Additional Costs:</strong>
-                            <ul className="mt-1 space-y-1">
-                              {platform.pricing.additionalCosts.map((cost, costIndex) => (
-                                <li key={costIndex}>• {cost}</li>
+                            <ul className="mt-1">
+                              {platform.pricing.additionalCosts.slice(0, 2).map((cost, costIndex) => (
+                                <li key={costIndex} className="text-xs break-words">• {cost}</li>
                               ))}
                             </ul>
                           </div>
@@ -276,41 +281,47 @@ export default function Home() {
                       </div>
                     </td>
                     
-                    <td className="px-6 py-4">
-                      <div className="space-y-4">
+                    <td className="px-3 py-4">
+                      <div className="space-y-3">
                         <div>
-                          <h4 className="font-semibold text-green-700 mb-2">Pros:</h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {platform.pros.map((pro, proIndex) => (
+                          <h4 className="font-semibold text-green-700 mb-1 text-sm">Pros:</h4>
+                          <ul className="text-xs text-gray-600 space-y-1">
+                            {platform.pros.slice(0, 3).map((pro, proIndex) => (
                               <li key={proIndex} className="flex items-start">
-                                <span className="text-green-500 mr-2">+</span>
-                                {pro}
+                                <span className="text-green-500 mr-1 flex-shrink-0">+</span>
+                                <span className="break-words">{pro}</span>
                               </li>
                             ))}
+                            {platform.pros.length > 3 && (
+                              <li className="text-gray-400 text-xs">+{platform.pros.length - 3} more</li>
+                            )}
                           </ul>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-red-700 mb-2">Cons:</h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {platform.cons.map((con, conIndex) => (
+                          <h4 className="font-semibold text-red-700 mb-1 text-sm">Cons:</h4>
+                          <ul className="text-xs text-gray-600 space-y-1">
+                            {platform.cons.slice(0, 3).map((con, conIndex) => (
                               <li key={conIndex} className="flex items-start">
-                                <span className="text-red-500 mr-2">-</span>
-                                {con}
+                                <span className="text-red-500 mr-1 flex-shrink-0">-</span>
+                                <span className="break-words">{con}</span>
                               </li>
                             ))}
+                            {platform.cons.length > 3 && (
+                              <li className="text-gray-400 text-xs">+{platform.cons.length - 3} more</li>
+                            )}
                           </ul>
                         </div>
                       </div>
                     </td>
 
-                    <td className="px-6 py-4">
-                      <div className="space-y-2">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Features:</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
+                    <td className="px-3 py-4 pr-10">
+                      <div className="space-y-1">
+                        <h4 className="font-semibold text-gray-900 mb-1 text-sm break-words">Business Features:</h4>
+                        <ul className="text-xs text-gray-600 space-y-1">
                           {platform.businessFeatures.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-start">
-                              <span className="text-blue-500 mr-2">•</span>
-                              {feature}
+                              <span className="text-blue-500 mr-1 flex-shrink-0">•</span>
+                              <span className="break-words">{feature}</span>
                             </li>
                           ))}
                         </ul>
