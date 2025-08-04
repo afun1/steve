@@ -396,6 +396,14 @@ export default function Home() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2">•</span>
+                  <strong>GoTo Connect:</strong> User-friendly with good video integration
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">•</span>
+                  <strong>Vonage:</strong> Strong international presence and API platform
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">•</span>
                   <strong>8x8:</strong> More affordable with good call center features
                 </li>
                 <li className="flex items-start">

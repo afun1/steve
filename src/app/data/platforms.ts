@@ -723,6 +723,561 @@ export const voiceServicePlatforms: VoiceServicePlatform[] = [
     ]
   },
   {
+    name: "GoTo Connect",
+    website: "https://goto.com/connect",
+    customNumber: {
+      available: true,
+      details: "Local, toll-free, and vanity numbers available worldwide",
+      cost: "Included with plans, additional numbers $4.99/month"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile app works with any internet connection including eSIM",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Basic",
+          price: "$19/user/month",
+          features: ["Unlimited calling", "Voicemail", "Call forwarding", "Mobile/desktop apps", "SMS messaging"]
+        },
+        {
+          name: "Standard",
+          price: "$23/user/month",
+          features: ["Everything in Basic", "Video conferencing", "Team messaging", "Call recording", "Analytics"]
+        },
+        {
+          name: "Advanced",
+          price: "$31/user/month",
+          features: ["Everything in Standard", "Advanced call routing", "CRM integrations", "Advanced analytics", "Multi-site management"]
+        },
+        {
+          name: "Ultra",
+          price: "$39/user/month",
+          features: ["Everything in Advanced", "Contact center features", "Advanced security", "Custom integrations", "Priority support"]
+        }
+      ],
+      additionalCosts: ["Additional phone numbers ($4.99/month)", "International calling", "Premium add-ons"]
+    },
+    pros: [
+      "User-friendly interface",
+      "Good mobile app",
+      "Reliable call quality",
+      "Strong video conferencing integration",
+      "Good customer support",
+      "Flexible call routing",
+      "Team messaging included"
+    ],
+    cons: [
+      "Can be expensive for small teams",
+      "Limited customization options",
+      "Some advanced features require higher tiers",
+      "International rates can be high",
+      "Setup can be complex for larger organizations"
+    ],
+    features: [
+      "Business phone system",
+      "Video conferencing",
+      "Team messaging",
+      "Call recording",
+      "Analytics",
+      "Mobile/desktop apps",
+      "CRM integrations"
+    ],
+    callQuality: "Excellent - enterprise grade",
+    businessFeatures: [
+      "Auto-attendant",
+      "Call queues",
+      "Analytics dashboard",
+      "CRM integration",
+      "Call recording",
+      "Multi-site management",
+      "Contact center tools"
+    ]
+  },
+  {
+    name: "Vonage Business Communications",
+    website: "https://vonage.com/business/",
+    customNumber: {
+      available: true,
+      details: "Local, toll-free, and international numbers in 100+ countries",
+      cost: "Included with plans, additional numbers available"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile app works with any internet connection including eSIM",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Mobile",
+          price: "$19.99/user/month",
+          features: ["Unlimited calling", "Mobile app", "Voicemail", "Call forwarding", "SMS messaging"]
+        },
+        {
+          name: "Premium",
+          price: "$29.99/user/month",
+          features: ["Everything in Mobile", "Desktop app", "Video conferencing", "Team messaging", "Call recording"]
+        },
+        {
+          name: "Advanced",
+          price: "$39.99/user/month",
+          features: ["Everything in Premium", "Advanced call routing", "Analytics", "CRM integrations", "Multi-site support"]
+        }
+      ],
+      additionalCosts: ["International calling", "Additional phone numbers", "Premium support", "Advanced features"]
+    },
+    pros: [
+      "Strong international presence",
+      "Good call quality worldwide",
+      "Comprehensive API platform",
+      "Flexible pricing options",
+      "Good mobile experience",
+      "Strong developer tools",
+      "Reliable global infrastructure"
+    ],
+    cons: [
+      "Can be complex for small businesses",
+      "Higher pricing than some competitors",
+      "Learning curve for advanced features",
+      "Support quality can vary",
+      "Some features require technical setup"
+    ],
+    features: [
+      "Global phone system",
+      "Video conferencing",
+      "Team messaging",
+      "API platform",
+      "Call analytics",
+      "Mobile/desktop apps",
+      "International calling"
+    ],
+    callQuality: "Excellent - global carrier network",
+    businessFeatures: [
+      "Auto-attendant",
+      "Call center features",
+      "Advanced analytics",
+      "API integrations",
+      "Multi-location support",
+      "International expansion tools"
+    ]
+  },
+  {
+    name: "MagicJack",
+    website: "https://magicjack.com",
+    customNumber: {
+      available: true,
+      details: "Get a US phone number, can port existing number",
+      cost: "Included with service, $19.95/year for number porting"
+    },
+    esimSupport: {
+      available: true,
+      details: "App works with any internet connection including eSIM data",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "MagicJack GO",
+          price: "$39.95/year",
+          features: ["Unlimited US/Canada calling", "Mobile app", "Voicemail", "Call forwarding", "Caller ID"]
+        },
+        {
+          name: "MagicJack for Business",
+          price: "$99.95/year per line",
+          features: ["Everything in GO", "Multiple extensions", "Auto-attendant", "Call conferencing", "Business features"]
+        }
+      ],
+      additionalCosts: ["International calling rates", "Number porting ($19.95)", "Premium features"]
+    },
+    pros: [
+      "Very affordable pricing",
+      "No monthly fees",
+      "Works with existing phone",
+      "Simple setup",
+      "Good for basic needs",
+      "US/Canada unlimited calling",
+      "Mobile app available"
+    ],
+    cons: [
+      "Limited business features",
+      "Call quality depends on internet",
+      "Customer service issues reported",
+      "Basic interface",
+      "No advanced routing",
+      "Limited international support",
+      "Not suitable for enterprise use"
+    ],
+    features: [
+      "VoIP calling",
+      "Mobile app",
+      "Voicemail",
+      "Call forwarding",
+      "Caller ID",
+      "Conference calling",
+      "Number porting"
+    ],
+    callQuality: "Good - depends on internet connection",
+    businessFeatures: [
+      "Basic auto-attendant",
+      "Multiple extensions (business plan)",
+      "Call conferencing",
+      "Basic voicemail"
+    ]
+  },
+  {
+    name: "Intermedia Unite",
+    website: "https://intermedia.com/unite",
+    customNumber: {
+      available: true,
+      details: "Local, toll-free, and vanity numbers available",
+      cost: "Included with plans, additional numbers $4.99/month"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile and desktop apps work with any internet connection",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Unite",
+          price: "$27.99/user/month",
+          features: ["Unlimited calling", "Video conferencing", "Team messaging", "File sharing", "Mobile/desktop apps"]
+        },
+        {
+          name: "Unite Pro",
+          price: "$32.99/user/month",
+          features: ["Everything in Unite", "Advanced call features", "Call recording", "Analytics", "CRM integration"]
+        }
+      ],
+      additionalCosts: ["Additional phone numbers ($4.99/month)", "International calling", "Premium support"]
+    },
+    pros: [
+      "Easiest to use interface (PCMag winner)",
+      "Extensive voice administration features",
+      "Chat, file sync, and video functionality",
+      "AI Assistant for content creation",
+      "Responsive customer support",
+      "All-in-one communication platform",
+      "Good for teams collaboration"
+    ],
+    cons: [
+      "Higher pricing than basic VoIP",
+      "Requires mobile app for contact import",
+      "Web app is Chrome-only",
+      "Limited third-party integrations",
+      "Can be overkill for simple needs"
+    ],
+    features: [
+      "Unified communications",
+      "Team messaging",
+      "Video conferencing",
+      "File sharing",
+      "Voice administration",
+      "AI Assistant",
+      "Mobile/desktop apps"
+    ],
+    callQuality: "Excellent - enterprise grade",
+    businessFeatures: [
+      "Advanced call routing",
+      "Call recording",
+      "Analytics dashboard",
+      "Team collaboration tools",
+      "File sync",
+      "Admin console"
+    ]
+  },
+  {
+    name: "Microsoft Teams Phone",
+    website: "https://microsoft.com/microsoft-teams/microsoft-teams-phone",
+    customNumber: {
+      available: true,
+      details: "Local and toll-free numbers through Microsoft calling plans",
+      cost: "Included with calling plans starting at $8/user/month"
+    },
+    esimSupport: {
+      available: true,
+      details: "Teams app works with any internet connection including eSIM",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Teams Phone",
+          price: "$8/user/month",
+          features: ["PSTN calling within Teams", "Auto-attendant", "Call queues", "Call forwarding"]
+        },
+        {
+          name: "Teams Phone + Calling Plan",
+          price: "$20/user/month",
+          features: ["Everything in Teams Phone", "Domestic calling plan", "Unlimited minutes"]
+        },
+        {
+          name: "Teams Phone + International Plan",
+          price: "$35/user/month",
+          features: ["Everything in Phone + Calling", "International calling minutes", "Premium features"]
+        }
+      ],
+      additionalCosts: ["Microsoft 365 subscription required", "International calling", "Audio conferencing", "Premium features"]
+    },
+    pros: [
+      "Deep Microsoft 365 integration",
+      "Reliable performance",
+      "Powerful AI features with Copilot",
+      "Extensive admin capabilities",
+      "Excellent 24/7 support",
+      "Seamless Teams experience",
+      "Enterprise-grade security"
+    ],
+    cons: [
+      "Expensive with confusing pricing",
+      "Complex to manage and setup",
+      "Requires Microsoft 365 ecosystem",
+      "Limited for non-Microsoft users",
+      "Can be overwhelming for small businesses"
+    ],
+    features: [
+      "PSTN calling in Teams",
+      "Auto-attendant",
+      "Call queues",
+      "Call recording",
+      "Voicemail transcription",
+      "AI-powered features",
+      "Admin console"
+    ],
+    callQuality: "Excellent - Microsoft infrastructure",
+    businessFeatures: [
+      "Enterprise call routing",
+      "Advanced analytics",
+      "Compliance features",
+      "Direct routing",
+      "Emergency calling",
+      "Policy management"
+    ]
+  },
+  {
+    name: "Ooma Office",
+    website: "https://ooma.com/business/",
+    customNumber: {
+      available: true,
+      details: "Local and toll-free numbers available",
+      cost: "Included with plans"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile app works with any internet connection",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Essentials",
+          price: "$19.95/user/month",
+          features: ["Unlimited calling", "Mobile/desktop apps", "Voicemail", "Call forwarding", "Auto-attendant"]
+        },
+        {
+          name: "Pro",
+          price: "$24.95/user/month",
+          features: ["Everything in Essentials", "Video conferencing", "Call recording", "Advanced features", "Analytics"]
+        },
+        {
+          name: "Pro Plus",
+          price: "$29.95/user/month",
+          features: ["Everything in Pro", "Advanced call center", "CRM integration", "Hot desking", "Multi-site"]
+        }
+      ],
+      additionalCosts: ["International calling", "Additional features", "Hardware"]
+    },
+    pros: [
+      "Best guided setup process (PCMag winner)",
+      "Reliable calling performance",
+      "Easy to use interface",
+      "Reasonable pricing",
+      "Good customer support",
+      "Simple administration",
+      "Good for small businesses"
+    ],
+    cons: [
+      "No AI or advanced monitoring tools",
+      "Video meetings could be smoother",
+      "Limited advanced features",
+      "Fewer integrations than competitors",
+      "US-focused service"
+    ],
+    features: [
+      "Business phone system",
+      "Video conferencing",
+      "Mobile/desktop apps",
+      "Auto-attendant",
+      "Call recording",
+      "Voicemail",
+      "Conference calling"
+    ],
+    callQuality: "Good - reliable performance",
+    businessFeatures: [
+      "Auto-attendant",
+      "Call groups",
+      "Basic analytics",
+      "Multi-location support",
+      "Hot desking",
+      "Basic CRM integration"
+    ]
+  },
+  {
+    name: "Zoho Voice",
+    website: "https://zoho.com/voice/",
+    customNumber: {
+      available: true,
+      details: "Local numbers in supported countries",
+      cost: "Varies by plan and location"
+    },
+    esimSupport: {
+      available: true,
+      details: "Web and mobile apps work with any internet connection",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: true,
+      plans: [
+        {
+          name: "Free",
+          price: "Free",
+          features: ["Basic calling", "Limited features", "Analytics", "Reporting"]
+        },
+        {
+          name: "Standard",
+          price: "$15/user/month",
+          features: ["Unlimited calling", "Advanced routing", "CRM integration", "Call recording", "Analytics"]
+        },
+        {
+          name: "Professional",
+          price: "$30/user/month",
+          features: ["Everything in Standard", "Advanced features", "Multi-level IVR", "Call monitoring", "Custom reports"]
+        }
+      ],
+      additionalCosts: ["International calling", "Additional phone numbers", "Premium features"]
+    },
+    pros: [
+      "Best for Zoho customers (PCMag winner)",
+      "Straightforward interface for call management",
+      "Excellent customer support",
+      "Works seamlessly with Zoho services",
+      "Free tier with analytics",
+      "Good value for Zoho ecosystem users",
+      "Custom reporting available"
+    ],
+    cons: [
+      "No built-in video calling features",
+      "No AI features currently",
+      "Limited third-party integrations",
+      "Doesn't support many add-ons",
+      "Smaller feature set than competitors",
+      "Limited global coverage"
+    ],
+    features: [
+      "Cloud phone system",
+      "Call management",
+      "CRM integration",
+      "Call recording",
+      "Analytics and reporting",
+      "Multi-level IVR",
+      "Call monitoring"
+    ],
+    callQuality: "Good - reliable for business use",
+    businessFeatures: [
+      "Zoho CRM integration",
+      "Advanced call routing",
+      "Custom reports",
+      "Call monitoring",
+      "Multi-level IVR",
+      "Team management"
+    ]
+  },
+  {
+    name: "Go High Level (GHL)",
+    website: "https://gohighlevel.com",
+    customNumber: {
+      available: true,
+      details: "Local and toll-free numbers available, can port existing numbers",
+      cost: "Included with plans, additional numbers $2/month each"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile app and web platform work with any internet connection",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Starter",
+          price: "$97/month",
+          features: ["Up to 3 sub-accounts", "Unlimited contacts", "CRM", "Voice calling", "SMS/Email marketing", "Funnels", "Websites"]
+        },
+        {
+          name: "Unlimited",
+          price: "$297/month",
+          features: ["Unlimited sub-accounts", "Everything in Starter", "White label rights", "Advanced automations", "A2P 10DLC compliance"]
+        },
+        {
+          name: "SaaS Pro",
+          price: "$497/month",
+          features: ["Everything in Unlimited", "Custom app development", "Advanced integrations", "Priority support", "Custom branding"]
+        }
+      ],
+      additionalCosts: ["Additional phone numbers ($2/month)", "SMS usage fees", "Advanced features", "Custom development"]
+    },
+    pros: [
+      "All-in-one business platform",
+      "Integrated CRM and marketing automation",
+      "White label capabilities for agencies",
+      "Built-in funnel and website builder",
+      "SMS and email marketing included",
+      "Lead management and nurturing",
+      "Good for agencies and consultants",
+      "Comprehensive business solution"
+    ],
+    cons: [
+      "Higher pricing than pure VoIP solutions",
+      "Learning curve for all features",
+      "Can be overwhelming for simple needs",
+      "Limited advanced voice features",
+      "Primarily US-focused",
+      "May be overkill for voice-only needs"
+    ],
+    features: [
+      "Business phone system",
+      "CRM integration",
+      "SMS marketing",
+      "Email marketing", 
+      "Funnel builder",
+      "Website builder",
+      "Lead management",
+      "Appointment scheduling",
+      "Automation workflows"
+    ],
+    callQuality: "Good - reliable for business use",
+    businessFeatures: [
+      "CRM integration",
+      "Lead tracking",
+      "Call recording",
+      "SMS campaigns",
+      "Marketing automation",
+      "Pipeline management",
+      "White label options",
+      "Agency tools"
+    ]
+  },
+  {
     name: "Twilio Voice",
     website: "https://twilio.com/voice",
     customNumber: {
