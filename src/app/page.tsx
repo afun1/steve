@@ -10,7 +10,7 @@ export default function Home() {
             Texting Platform Comparison
           </h1>
           <p className="mt-2 text-lg text-gray-600 text-center max-w-3xl mx-auto">
-            Compare texting platforms with focus on custom "from" numbers, pricing, eSIM support, and features.
+            Compare texting platforms with focus on custom &quot;from&quot; numbers, pricing, eSIM support, and features.
           </p>
         </div>
       </header>
@@ -207,7 +207,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Considerations</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom "From" Numbers</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom &quot;From&quot; Numbers</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
