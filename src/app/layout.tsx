@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Texting Platform Comparison',
-  description: 'Compare texting platforms like MightyText with focus on custom from numbers, pricing, and eSIM options',
+  title: 'Texting & Voice Platform Comparison',
+  description: 'Compare texting and voice platforms like Google Voice, RingCentral, MightyText with focus on custom from numbers, pricing, and eSIM options. Perfect for Google Workspace Voice alternatives.',
 }
 
 export default function RootLayout({

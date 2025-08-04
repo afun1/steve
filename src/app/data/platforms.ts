@@ -26,6 +26,36 @@ export interface TextingPlatform {
   features: string[];
 }
 
+export interface VoiceServicePlatform {
+  name: string;
+  website: string;
+  logo?: string;
+  customNumber: {
+    available: boolean;
+    details: string;
+    cost?: string;
+  };
+  esimSupport: {
+    available: boolean;
+    details: string;
+    providers?: string[];
+  };
+  pricing: {
+    freeTier: boolean;
+    plans: {
+      name: string;
+      price: string;
+      features: string[];
+    }[];
+    additionalCosts?: string[];
+  };
+  pros: string[];
+  cons: string[];
+  features: string[];
+  callQuality: string;
+  businessFeatures: string[];
+}
+
 export const textingPlatforms: TextingPlatform[] = [
   {
     name: "Google Messages",
@@ -370,5 +400,392 @@ export const esimProviders = [
     coverage: "Global",
     dataPlans: "Various plans available",
     features: ["Travel-focused", "Multiple carriers", "Instant activation"]
+  }
+];
+
+export const voiceServicePlatforms: VoiceServicePlatform[] = [
+  {
+    name: "Google Voice (Personal)",
+    website: "https://voice.google.com",
+    customNumber: {
+      available: true,
+      details: "Free Google Voice number or port existing number",
+      cost: "Free for new number, $20 to port existing number"
+    },
+    esimSupport: {
+      available: true,
+      details: "Works with any internet connection including eSIM data",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: true,
+      plans: [
+        {
+          name: "Personal",
+          price: "Free",
+          features: ["Free US number", "Voicemail transcription", "Call forwarding", "Call screening", "Visual voicemail"]
+        }
+      ],
+      additionalCosts: ["International calling rates", "Number porting fee ($20)"]
+    },
+    pros: [
+      "Completely free for US calls",
+      "Excellent spam filtering",
+      "Voicemail transcription",
+      "Works on any device",
+      "Integration with Google services",
+      "Call recording (where legal)",
+      "Multiple device ringing"
+    ],
+    cons: [
+      "Limited to US/Canada",
+      "Can lose number if inactive",
+      "No 24/7 support",
+      "Limited business features",
+      "Requires Google account"
+    ],
+    features: [
+      "Virtual phone number",
+      "Voicemail transcription",
+      "Call forwarding",
+      "Call screening",
+      "Conference calling",
+      "Do not disturb"
+    ],
+    callQuality: "Good - depends on internet connection",
+    businessFeatures: ["Basic call forwarding", "Voicemail", "Call history"]
+  },
+  {
+    name: "Google Workspace Voice",
+    website: "https://workspace.google.com/products/voice/",
+    customNumber: {
+      available: true,
+      details: "Business phone numbers with advanced admin controls",
+      cost: "$10/user/month for voice license"
+    },
+    esimSupport: {
+      available: true,
+      details: "Works with any internet connection including eSIM data",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Starter",
+          price: "$10/user/month",
+          features: ["Business phone number", "Voicemail transcription", "Call forwarding", "Auto-attendant", "Call analytics"]
+        },
+        {
+          name: "Standard",
+          price: "$20/user/month", 
+          features: ["Everything in Starter", "Advanced call routing", "Ring groups", "Multi-level auto-attendant", "Desk phone support"]
+        },
+        {
+          name: "Premier",
+          price: "$30/user/month",
+          features: ["Everything in Standard", "Advanced analytics", "eDiscovery", "Data loss prevention", "Location-based routing"]
+        }
+      ],
+      additionalCosts: ["International calling rates", "Additional phone numbers", "Desk phones"]
+    },
+    pros: [
+      "Enterprise-grade features",
+      "24/7 support",
+      "Integration with Google Workspace",
+      "Advanced admin controls",
+      "Excellent reliability",
+      "Auto-attendant included",
+      "Mobile and desktop apps"
+    ],
+    cons: [
+      "More expensive than alternatives",
+      "Requires Google Workspace subscription",
+      "Complex pricing structure",
+      "Limited international coverage",
+      "Setup can be complex"
+    ],
+    features: [
+      "Business phone numbers",
+      "Auto-attendant",
+      "Call analytics",
+      "Ring groups",
+      "Call recording",
+      "Voicemail transcription",
+      "Mobile/desktop apps"
+    ],
+    callQuality: "Excellent - enterprise grade",
+    businessFeatures: [
+      "Auto-attendant",
+      "Call analytics",
+      "Admin console", 
+      "User management",
+      "Call recording",
+      "Advanced routing"
+    ]
+  },
+  {
+    name: "RingCentral",
+    website: "https://ringcentral.com",
+    customNumber: {
+      available: true,
+      details: "Local, toll-free, and vanity numbers available",
+      cost: "Included with plans, additional numbers $4.99/month"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile app works with any data connection including eSIM",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Core",
+          price: "$19.99/user/month",
+          features: ["Unlimited calling", "SMS/MMS", "Team messaging", "Video conferencing", "Mobile/desktop apps"]
+        },
+        {
+          name: "Advanced",
+          price: "$24.99/user/month",
+          features: ["Everything in Core", "Advanced call handling", "Call recording", "Analytics", "Integrations"]
+        },
+        {
+          name: "Ultra",
+          price: "$34.99/user/month",
+          features: ["Everything in Advanced", "Advanced analytics", "Unlimited cloud storage", "Advanced security"]
+        }
+      ],
+      additionalCosts: ["Additional phone numbers ($4.99/month)", "International calling", "Desk phones"]
+    },
+    pros: [
+      "Comprehensive business features",
+      "Excellent call quality",
+      "Strong mobile apps",
+      "Good integrations (Salesforce, etc.)",
+      "24/7 support",
+      "Reliable service",
+      "Team messaging included"
+    ],
+    cons: [
+      "More expensive than basic options",
+      "Can be complex for small businesses",
+      "Learning curve for advanced features",
+      "International rates can be high"
+    ],
+    features: [
+      "Business phone system",
+      "Team messaging",
+      "Video conferencing",
+      "Call analytics",
+      "CRM integrations",
+      "Mobile/desktop apps",
+      "Call recording"
+    ],
+    callQuality: "Excellent - carrier grade",
+    businessFeatures: [
+      "Auto-attendant",
+      "Call queues",
+      "Analytics",
+      "CRM integration",
+      "Call recording",
+      "Team collaboration"
+    ]
+  },
+  {
+    name: "8x8",
+    website: "https://8x8.com",
+    customNumber: {
+      available: true,
+      details: "Local and toll-free numbers in 40+ countries",
+      cost: "Included with plans"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile app works with any internet connection",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "Express",
+          price: "$12/user/month",
+          features: ["Unlimited calling", "Mobile/desktop apps", "Call forwarding", "Voicemail", "Team messaging"]
+        },
+        {
+          name: "X2",
+          price: "$24/user/month",
+          features: ["Everything in Express", "Video conferencing", "Call recording", "Analytics", "CRM integration"]
+        },
+        {
+          name: "X4",
+          price: "$44/user/month",
+          features: ["Everything in X2", "Advanced analytics", "Quality management", "Workforce optimization"]
+        }
+      ],
+      additionalCosts: ["International calling", "Additional features", "Professional services"]
+    },
+    pros: [
+      "Good value for money",
+      "Global presence",
+      "Integrated communications",
+      "Good analytics",
+      "Reliable service",
+      "Contact center features"
+    ],
+    cons: [
+      "Interface can be outdated",
+      "Mixed customer support reviews",
+      "Some features require higher tiers",
+      "Learning curve for advanced features"
+    ],
+    features: [
+      "Cloud phone system",
+      "Team messaging",
+      "Video conferencing",
+      "Contact center",
+      "Analytics",
+      "CRM integrations"
+    ],
+    callQuality: "Good to excellent",
+    businessFeatures: [
+      "Auto-attendant",
+      "Call center features",
+      "Analytics",
+      "Workforce management",
+      "Quality monitoring"
+    ]
+  },
+  {
+    name: "Zoom Phone",
+    website: "https://zoom.us/phone",
+    customNumber: {
+      available: true,
+      details: "Local, toll-free, and international numbers",
+      cost: "Included with plans, additional numbers extra"
+    },
+    esimSupport: {
+      available: true,
+      details: "Mobile app works with any internet connection",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: false,
+      plans: [
+        {
+          name: "United States & Canada",
+          price: "$10/user/month",
+          features: ["Unlimited calling", "Voicemail", "Call forwarding", "Mobile/desktop apps", "SMS"]
+        },
+        {
+          name: "Metered",
+          price: "$10/user/month + usage",
+          features: ["Pay per minute", "All basic features", "International calling"]
+        },
+        {
+          name: "Unlimited",
+          price: "$15/user/month",
+          features: ["Unlimited international", "All features", "Advanced call handling"]
+        }
+      ],
+      additionalCosts: ["Additional phone numbers", "Premium features", "Zoom Meetings license"]
+    },
+    pros: [
+      "Excellent integration with Zoom",
+      "Easy to use",
+      "Good call quality",
+      "Competitive pricing",
+      "Strong video integration",
+      "Good mobile app"
+    ],
+    cons: [
+      "Newer to phone market",
+      "Limited advanced features",
+      "Requires Zoom ecosystem",
+      "Fewer integrations than competitors"
+    ],
+    features: [
+      "Cloud phone system",
+      "Zoom integration",
+      "Video conferencing",
+      "SMS messaging",
+      "Call recording",
+      "Mobile/desktop apps"
+    ],
+    callQuality: "Excellent",
+    businessFeatures: [
+      "Auto-attendant",
+      "Call queues",
+      "Analytics",
+      "Zoom integration",
+      "Call recording"
+    ]
+  },
+  {
+    name: "Twilio Voice",
+    website: "https://twilio.com/voice",
+    customNumber: {
+      available: true,
+      details: "Programmable phone numbers worldwide",
+      cost: "$1-15/month per number depending on type and location"
+    },
+    esimSupport: {
+      available: true,
+      details: "API-based service works with any internet connection",
+      providers: ["Any data provider"]
+    },
+    pricing: {
+      freeTier: true,
+      plans: [
+        {
+          name: "Pay-as-you-go",
+          price: "$0.0085/minute",
+          features: ["Programmable voice", "Global coverage", "APIs", "SDKs"]
+        },
+        {
+          name: "Phone Numbers",
+          price: "$1-15/month",
+          features: ["Local numbers", "Toll-free numbers", "International numbers", "Short codes"]
+        }
+      ],
+      additionalCosts: [
+        "Voice calls: $0.0085/minute",
+        "International rates vary",
+        "Phone number rental",
+        "SMS/MMS fees"
+      ]
+    },
+    pros: [
+      "Highly programmable",
+      "Global coverage",
+      "Developer-friendly",
+      "Scalable",
+      "Reliable infrastructure",
+      "Advanced features"
+    ],
+    cons: [
+      "Requires technical expertise",
+      "Can get expensive",
+      "No ready-made interface",
+      "Complex pricing",
+      "Overkill for simple needs"
+    ],
+    features: [
+      "Programmable voice",
+      "Global phone numbers",
+      "Voice APIs",
+      "Call recording",
+      "Conference calling",
+      "IVR systems"
+    ],
+    callQuality: "Excellent - carrier grade",
+    businessFeatures: [
+      "Custom IVR",
+      "Call routing",
+      "Analytics",
+      "Webhooks",
+      "Custom applications"
+    ]
   }
 ];
