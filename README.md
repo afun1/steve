@@ -2,6 +2,8 @@
 
 A comprehensive comparison website for texting platforms, focusing on custom "from" numbers, pricing, eSIM support, and platform features.
 
+*Last updated: August 7, 2025 - Testing GitHub sync*
+
 ## Features
 
 - **Platform Comparison**: Compare popular texting platforms like MightyText, Google Voice, Twilio, TextNow, and Sideline
