@@ -1,0 +1,6 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "cd phone-dialer-app && npm run build",
+  "installCommand": "cd phone-dialer-app && npm install",
+  "outputDirectory": "phone-dialer-app/.next"
+}
