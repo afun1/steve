@@ -327,7 +327,7 @@ export default function PhoneDialer() {
                 <li className="flex items-start space-x-2">
                   <span className="bg-purple-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">2</span>
                   <div>
-                    <strong>Enable Phone System:</strong> Activate GHL's phone system in your location settings
+                    <strong>Enable Phone System:</strong> Activate GHL&apos;s phone system in your location settings
                   </div>
                 </li>
                 <li className="flex items-start space-x-2">
