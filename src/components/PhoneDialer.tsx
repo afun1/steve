@@ -308,7 +308,7 @@ export default function PhoneDialer() {
       {/* GHL Integration Instructions */}
       <div className="mt-8 space-y-6">
         <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border border-purple-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">� Go High Level Integration</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Go High Level Integration</h3>
           <p className="text-gray-700 mb-4">
             Integrate this dialer with your GHL account to enable real 3-way calling with CRM automation.
           </p>
@@ -388,6 +388,141 @@ export default function PhoneDialer() {
               <div className="text-2xl mb-2">🎯</div>
               <h5 className="font-semibold text-purple-900">Lead Nurturing</h5>
               <p className="text-sm text-purple-700">Seamless 3-way calls with prospects and team members</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Phone Number Porting */}
+        <div className="bg-white p-6 rounded-lg shadow-lg border">
+          <h4 className="text-xl font-bold text-gray-900 mb-4">📱 Porting Your Phone Number to HighLevel</h4>
+          <p className="text-gray-700 mb-4">
+            Transfer your existing phone number to HighLevel to maintain business continuity and customer recognition.
+          </p>
+          
+          <div className="space-y-4">
+            <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+              <h5 className="font-bold text-blue-900 mb-2">📋 Required Steps</h5>
+              <ol className="space-y-2 text-sm text-blue-800">
+                <li className="flex items-start space-x-2">
+                  <span className="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">1</span>
+                  <div>
+                    <strong>Fill out the appropriate porting form:</strong>
+                    <ul className="mt-1 ml-4 space-y-1">
+                      <li>• US Number Porting Form</li>
+                      <li>• International Number Porting Form</li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">2</span>
+                  <div>
+                    <strong>Prepare a Letter of Authorization (LOA):</strong> Required for submission acceptance. Must include authorized signature and match billing name exactly.
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">3</span>
+                  <div>
+                    <strong>Gather your most recent phone billing statement:</strong> Must be a PDF file, cannot exceed 4MB, and be dated within the last 30 days.
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">4</span>
+                  <div>
+                    <strong>Verify account information matches exactly:</strong>
+                    <ul className="mt-1 ml-4 space-y-1">
+                      <li>• Number(s) in E164 format (e.g., +1XXXXXXXXXX)</li>
+                      <li>• Account holder name (must match billing)</li>
+                      <li>• Service address on file</li>
+                      <li>• Account number and PIN/SSN</li>
+                      <li>• Current service provider name</li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="bg-blue-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">5</span>
+                  <div>
+                    <strong>Submit your port request:</strong> Upload all documents and wait for confirmation before canceling current service.
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            {/* Timeline and Important Info */}
+            <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
+              <h6 className="font-bold text-yellow-900 mb-2">⏰ Porting Timeline & Requirements</h6>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-yellow-800">
+                <div>
+                  <strong>Typical Timeline:</strong>
+                  <ul className="mt-1 space-y-1">
+                    <li>• Simple ports: 1-3 business days</li>
+                    <li>• Complex ports: 7-10 business days</li>
+                    <li>• International: 2-6 weeks</li>
+                    <li>• Toll-free numbers: 3-5 business days</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Critical Requirements:</strong>
+                  <ul className="mt-1 space-y-1">
+                    <li>• Account must be in good standing</li>
+                    <li>• No outstanding balances</li>
+                    <li>• All info must match exactly</li>
+                    <li>• Keep current service active</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                <h6 className="font-bold text-orange-900 mb-2">🇨🇦 Canadian Numbers</h6>
+                <ul className="text-sm text-orange-800 space-y-1">
+                  <li>• Process takes 4–6 weeks</li>
+                  <li>• One-time porting fee applies</li>
+                  <li>• Use Twilio Porting Form for details</li>
+                  <li>• Additional documentation required</li>
+                </ul>
+              </div>
+              
+              <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                <h6 className="font-bold text-purple-900 mb-2">📞 Twilio Numbers</h6>
+                <ul className="text-sm text-purple-800 space-y-1">
+                  <li>• May need losing Account SID</li>
+                  <li>• Special process for account transfers</li>
+                  <li>• Refer to Twilio migration guide</li>
+                  <li>• Faster processing possible</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Common Issues and Solutions */}
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <h6 className="font-bold text-red-900 mb-2">⚠️ Common Port Rejection Reasons</h6>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-800">
+                <div>
+                  <strong>Information Mismatch:</strong>
+                  <ul className="mt-1 space-y-1">
+                    <li>• Name doesn&apos;t match billing</li>
+                    <li>• Wrong account number</li>
+                    <li>• Incorrect PIN/SSN</li>
+                    <li>• Address mismatch</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Account Issues:</strong>
+                  <ul className="mt-1 space-y-1">
+                    <li>• Outstanding balance</li>
+                    <li>• Account suspended</li>
+                    <li>• Contract restrictions</li>
+                    <li>• Service provider rejection</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+              <p className="text-sm text-green-800">
+                <strong>💡 Pro Tips:</strong> Contact your current provider first to confirm account details. Start porting 2-3 weeks before you need the number active. Keep current service until port completion is confirmed. Save all documentation for your records.
+              </p>
             </div>
           </div>
         </div>
