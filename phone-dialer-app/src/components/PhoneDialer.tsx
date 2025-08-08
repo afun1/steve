@@ -308,7 +308,7 @@ export default function PhoneDialer() {
       {/* GHL Integration Instructions */}
       <div className="mt-8 space-y-6">
         <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border border-purple-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">� Go High Level Integration</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Go High Level Integration</h3>
           <p className="text-gray-700 mb-4">
             Integrate this dialer with your GHL account to enable real 3-way calling with CRM automation.
           </p>
